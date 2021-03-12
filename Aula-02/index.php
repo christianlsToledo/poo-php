@@ -37,3 +37,7 @@ echo"</br>";
     ?>
 </body>
 </html>
+<!-- 
+    Aula 02
+    Foi feita uma Classe Caneta e o instanciamento do objeto, atribuição a seus atributos e chamada a seus metodos
+-->
