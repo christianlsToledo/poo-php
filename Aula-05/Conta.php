@@ -13,6 +13,7 @@
             $this->setCliente($cli);
             $this->setStatus(false);
             $this->setSaldo(0);
+            echo "<p>Conta de $cli criada com sucesso!</p>";
         }
         
         public function setNumConta ($n){
@@ -72,22 +73,22 @@
                     echo "Encerramento de conta realizado com sucesso! </br></br>";
                 }else{
                     if($this->getSaldo()<0){
-                        echo "Existem pendencias nesta conta, Impocivel feichá-la! </br></br>";
+                        echo "Existem pendencias na conta ",$this->getNumConta(),", Impocivel feichá-la! </br></br>";
                     }else{
-                        echo "Retire o saldo disponivel em conta para feichá-la!</br></br>";
+                        echo "Retire o saldo disponivel na conta ",$this->getNumConta()," para feichá-la!</br></br>";
                     }
                 }
             }else{
-                echo "Conta inativa!</br>";
+                echo "Conta ",$this->getNumConta()," inativa!</br>";
             }
         }
 
         public function depositar($v){
             if($this->getStatus()){
                 $this->setSaldo($this->getSaldo()+$v);
-                echo "Deposito de R$ $v realizado com sucesso.</br>";
+                echo "Deposito de R$ $v realizado na conta de ",$this->getCliente()," com sucesso.</br>";
             }else{
-                echo "Impossível depositar, esta conta está inativa!</br>";
+                echo "Impossível depositar, conta ",$this->getNumConta()," está inativa!</br>";
             }
 
         }
@@ -96,7 +97,7 @@
             if($this->getStatus()){
                 if($this->getSaldo()>=$v){
                     $this->setSaldo($this->getSaldo()-$v);
-                    echo "Saque de R$$v realizado com sucesso, seu saldo é de R$",$this->getSaldo(),".</br>";
+                    echo "Saque de R$$v realizado com sucesso na conta de ",$this->getCliente(),", o saldo é de R$",$this->getSaldo(),".</br>";
                 }else{
                     echo "Saldo insuficiente para esta operação!</br>";
                 }
@@ -109,13 +110,13 @@
             if($this->getStatus()){
                 if($this->getTipo()=="cc"){
                     $this->setSaldo($this->getSaldo()-12);
-                    echo "Debito de mensalidade Conta Corrente R$12,00. </br>";
+                    echo "Debito de mensalidade na Conta Corrente de ",$this->getCliente()," no valor de R$12,00. </br>";
                 }else{
                     $this->setSaldo($this->getSaldo()-20);
-                    echo "Debito de mensalidade Conta Poupaça R$20,00. </br>";
+                    echo "Debito de mensalidade na Conta Poupaça de ",$this->getCliente()," no valor de R$20,00. </br>";
                 }
             }else{
-                echo "Esta conta encontra-se inativa! </br>";
+                echo "Conta ",$this->getNumConta()," encontra-se inativa! </br>";
             }
         }
     }
