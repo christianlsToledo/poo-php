@@ -1,9 +1,9 @@
 <?php
 require_once 'Controlador.php';
 class ControleRemoto implements Controlador{
-    var $ligado;
-    var $volume;
-    var $tocando;
+    private $ligado;
+    private $volume;
+    private $tocando;
     
     function __construct() {
         $this->ligado = FALSE;
