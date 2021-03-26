@@ -1,5 +1,6 @@
 <?php
 require_once 'InterfaceLutador.php';
+require_once 'Luta.php';
 class Lutador implements InterfaceLutador {
     private $nome;
     private $nacionalidade;
@@ -21,7 +22,7 @@ class Lutador implements InterfaceLutador {
         $this->derrotas = $de;
         $this->empates = $em;
     }
-    private function getNome(){
+    public function getNome(){
         return $this->nome;
     }
     private function  setNome($no){
@@ -52,7 +53,7 @@ class Lutador implements InterfaceLutador {
         $this->peso = $pes;
         $this->setCategoria();
     }
-    private function getCategoria(){
+    public function getCategoria(){
         return $this->categoria;
     }
     private function setCategoria(){
@@ -88,7 +89,7 @@ class Lutador implements InterfaceLutador {
         $this->empates = $this->getEmpates()+1;
     }
 
-    public function apresentar(){
+    public function status(){
         echo "Caracteristicas do Lutador";
         echo "</br>-----------------------------------";
         echo "<p>Nome: ",$this->getNome();
@@ -101,7 +102,7 @@ class Lutador implements InterfaceLutador {
         echo "</p><p>Derrotas: ",$this->getDerrotas();
         echo "</p><p>Empates: ",$this->getEmpates(),"</p>";
     }
-    public function status(){
+    public function apresentar(){
         echo "</br>O lutador ",$this->getNome(),", de categoria ",$this->getCategoria(),", pesando ", $this->getPeso(),"Kg, vem neste capeonato acumulando ",$this->getVitorias()," vitórias, ",$this->getEmpates()," empates e ",$this->getDerrotas()," derrotas.";
     }
     public function ganharLuta(){
