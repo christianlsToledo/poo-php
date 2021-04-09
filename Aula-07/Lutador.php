@@ -90,9 +90,8 @@ class Lutador implements InterfaceLutador {
     }
 
     public function status(){
-        echo "Caracteristicas do Lutador";
+        echo "Caracteristicas ",$this->getNome();
         echo "</br>-----------------------------------";
-        echo "<p>Nome: ",$this->getNome();
         echo "</p><p>Nacionalidade: ",$this->getNacionalidade();
         echo "</p><p>Idade: ",$this->getIdade();
         echo "</p><p>Altura: ",$this->getAltura();
@@ -103,7 +102,7 @@ class Lutador implements InterfaceLutador {
         echo "</p><p>Empates: ",$this->getEmpates(),"</p>";
     }
     public function apresentar(){
-        echo "</br>O lutador ",$this->getNome(),", de categoria ",$this->getCategoria(),", pesando ", $this->getPeso(),"Kg, vem neste capeonato acumulando ",$this->getVitorias()," vitórias, ",$this->getEmpates()," empates e ",$this->getDerrotas()," derrotas.";
+        echo "</br>O lutador ",$this->getNome(),", de categoria ",$this->getCategoria(),"</br>, com ", $this->getPeso(),"Kg, vem neste capeonato acumulando </br>",$this->getVitorias()," vitórias, ",$this->getEmpates()," empates e ",$this->getDerrotas()," derrotas.</br>";
     }
     public function ganharLuta(){
         $this->setVitorias();
