@@ -1,12 +1,17 @@
 <?php
-
     abstract Class Pessoa{
         private $nome;
         private $idade;
         private $sexo;
 
         public function fazerAniversario(){     //Metodo proprietário
-            $this->idade++;
+            $this->setIdade($this->getIdade()+1);
+        }
+
+        function __construct($nome, $idade, $sexo){
+            $this->nome = $nome;
+            $this->idade = $idade;
+            $this->sexo = $sexo;
         }
 
         public function setNome($nome){

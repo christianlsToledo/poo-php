@@ -4,8 +4,8 @@
         private $matricula;
         private $curso;
 
-        public function cancelarMatr(){
-            $this->setMatricula(null);
+        public function pagarMensalidade(){
+            echo "<p>Obrigado ",$this->getNome(),", mensalidade paga com sucesso!</p>";
         }
 
         function __construct($nome,$idade,$sexo,$matricula, $curso){

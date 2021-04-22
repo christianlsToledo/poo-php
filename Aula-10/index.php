@@ -14,22 +14,24 @@
                 require_once 'Professor.php';
                 require_once 'Funcionario.php';
 
-                $pessoa         = new Pessoa("Christian",37,"M");
+               
                 $aluno          = new Aluno("Juliana",37,"F",1,"POO PHP");
-                $professor      = new Professor("Professor 1",55,"M","Prof Matematica",1500);
-                $funcionario    = new Funcionario("Funcionario 1 ",42,"F","Limpesa",true);
+                $professor      = new Professor("Gustavo G",55,"M","Prof Matematica",1500.00);
+                $funcionario    = new Funcionario("Clotilde C ",42,"F","Limpesa",true);
 
-                print_r($pessoa);
+                echo "<table> <tr>  <td>";
+                
                 print_r($aluno);
                 print_r($professor);
                 print_r($funcionario);
 
-                $aluno->
+                echo "</td> <td>";        
                 
-                print_r($pessoa);
                 print_r($aluno);
                 print_r($professor);
                 print_r($funcionario); 
+
+                echo "</td> </tr>   </table>"
         ?></pre>
     </body>
 </html>
