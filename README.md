@@ -14,3 +14,4 @@
  Aula 09 - Interação entre classes.
  Aula 10 - Conceitos e implementação de herança entre classes.
  Aula 11 - Utilização dos conceitos de Herança, e sobreposição da função pagar mensalidade pelo bolsista.
+ Aula 12 - Polimorfismo de sobrescrição. Sobrescrevendo os metodos herdados das superclasses 
