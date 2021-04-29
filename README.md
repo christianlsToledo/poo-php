@@ -15,3 +15,5 @@
  Aula 10 - Conceitos e implementação de herança entre classes.
  Aula 11 - Utilização dos conceitos de Herança, e sobreposição da função pagar mensalidade pelo bolsista.
  Aula 12 - Polimorfismo de sobrescrição. Sobrescrevendo os metodos herdados das superclasses 
+ Aula 13 - Polimorfismo de sobrecarga. O PHP não suporta sobrecarga, por tanto serão utilizados nomes de     
+            metodos que reflitam a função e os parametros, cada metodo que seria chamado por sobrecarga deverá ser chamado por deu nome e não pela diferenciação de assinatura.
