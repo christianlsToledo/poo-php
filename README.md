@@ -17,3 +17,6 @@
  Aula 12 - Polimorfismo de sobrescrição. Sobrescrevendo os metodos herdados das superclasses 
  Aula 13 - Polimorfismo de sobrecarga. O PHP não suporta sobrecarga, por tanto serão utilizados nomes de     
             metodos que reflitam a função e os parametros, cada metodo que seria chamado por sobrecarga deverá ser chamado por deu nome e não pela diferenciação de assinatura.
+Aula 14 - Exercicio de aplicação de lições aprendidas (Encapsulamento, Herança e Polimorfismo mais integração  
+            entre classes.) ** Não foram aplicados os conceitos de PrimaryKey nem o de forenign Key.
+            Fica como dica o incio dos estudos sobre a classe MySql i;
